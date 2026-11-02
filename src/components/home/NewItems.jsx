@@ -96,7 +96,7 @@ const NewItems = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up">
               <h2>New Items</h2>
               <div className="small-border bg-color-2"></div>
             </div>
@@ -108,7 +108,7 @@ const NewItems = () => {
             New items didn’t load. Refresh the page to try again.
           </p>
         ) : (
-          <div className="ni-wrap">
+          <div className="ni-wrap" data-aos="fade-up" data-aos-delay="100">
             <div ref={sliderRef} className="keen-slider">
               {loading
                 ? Array.from({ length: 4 }, (_, i) => <SkeletonSlide key={i} />)

@@ -60,6 +60,7 @@ const ItemDetails = () => {
                     <img
                       src={item.nftImage}
                       className="img-fluid img-rounded mb-sm-30 nft-image"
+                      data-aos="zoom-in"
                       alt={item.title}
                     />
                   )}
@@ -74,7 +75,7 @@ const ItemDetails = () => {
                       <span className="id-skeleton__line id-skeleton__line--short" />
                     </div>
                   ) : (
-                    <div className="item_info">
+                    <div className="item_info" data-aos="fade-up" data-aos-delay="100">
                       <h2>
                         {item.title} #{item.tag}
                       </h2>

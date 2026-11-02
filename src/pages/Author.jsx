@@ -91,7 +91,7 @@ const Author = () => {
             {!error && (
               <div className="row">
                 <div className="col-md-12">
-                  <div className="d_profile de-flex">
+                  <div className="d_profile de-flex" data-aos="fade-up">
                     <div className="de-flex-col">
                       <div className="profile_avatar">
                         {loading ? (
@@ -157,7 +157,7 @@ const Author = () => {
                             ))}
 
                           {!loading &&
-                            author.nftCollection.map((item) => (
+                            author.nftCollection.map((item, index) => (
                               <div
                                 key={item.id}
                                 className={COLUMN_CLASS}
@@ -166,7 +166,11 @@ const Author = () => {
                                   backgroundSize: "cover",
                                 }}
                               >
-                                <div className="nft__item">
+                                <div
+                                  className="nft__item"
+                                  data-aos="fade-up"
+                                  data-aos-delay={(index % 4) * 100}
+                                >
                                   <div className="author_list_pp">
                                     <Link to={`/author/${author.authorId}`}>
                                       <img

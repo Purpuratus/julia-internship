@@ -112,13 +112,17 @@ const ExploreItems = () => {
 
       {!loading &&
         !error &&
-        items.slice(0, visible).map((item) => (
+        items.slice(0, visible).map((item, index) => (
           <div
             key={item.id}
             className={COLUMN_CLASS}
             style={{ display: "block", backgroundSize: "cover" }}
           >
-            <div className="nft__item">
+            <div
+              className="nft__item"
+              data-aos="fade-up"
+              data-aos-delay={(index % 4) * 100}
+            >
               <div className="author_list_pp">
                 <Link to={`/author/${item.authorId}`}>
                   <img
