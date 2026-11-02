@@ -5,6 +5,19 @@ import Author from "./pages/Author";
 import ItemDetails from "./pages/ItemDetails";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
+   import AOS from "aos";
+   import "aos/dist/aos.css";
+    useEffect(() => {
+     AOS.init({
+       duration: 700,
+       once: true,
+       offset: 80,
+       disable: () =>
+         window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+     });
+   }, []);
+
 
 function App() {
   return (
